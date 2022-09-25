@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var getAlldbRouter = require("./routes/getAllDb");
+var addNewRemoteControlRouter = require("./routes/addNewRemoteControl");
+
 
 var app = express();
 
@@ -23,6 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/get-all-db/",getAlldbRouter);
+app.use("/get-all-db/",getAlldbRouter);
+app.use("/add-new-remote/",addNewRemoteControlRouter);
 
 
 
